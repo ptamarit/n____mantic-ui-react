@@ -24,7 +24,7 @@ const html = `
 `
 
 const assertInnerHtml = async () => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({args: ['--no-sandbox']})
   const server = http
     .createServer((req, response) => {
       if (req.url === '/umd.js') {
