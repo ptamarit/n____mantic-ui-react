@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20"
-          registry-url: "https://registry.npmjs.org"
+          registry-url: "https://npm.pkg.github.com"
 
       - name: Install and build
         run: |
@@ -41,12 +41,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
-
-      - name: Setup Node.js for publishing on GitHub Packages
-        uses: actions/setup-node@v6
-        with:
-          node-version: "20"
-          registry-url: "https://npm.pkg.github.com"
 
       - name: Publish on GitHub Packages
         run: yarn publish
