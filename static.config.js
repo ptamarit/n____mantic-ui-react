@@ -41,8 +41,7 @@ export default {
     src: config.paths.docsSrc(),
     public: config.paths.docsPublic(),
   },
-  siteRoot: process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : 'https://react.semantic-ui.com',
+  siteRoot: 'https://ptamarit.github.io',
+  basePath: 'Semantic-UI-React',
   webpack,
 }
