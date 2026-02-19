@@ -24,11 +24,11 @@ const html = `
 `
 
 const assertInnerHtml = async () => {
-  const browser = await puppeteer.launch({args: ['--no-sandbox']})
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
   const server = http
     .createServer((req, response) => {
       if (req.url === '/umd.js') {
-        fs.readFile(config.paths.dist('umd', 'semantic-ui-react.min.js'), (err, data) => {
+        fs.readFile(config.paths.dist('umd', '@temp/n____mantic-ui-react.min.js'), (err, data) => {
           response.setHeader('Content-type', 'text/javascript')
           response.end(data)
         })
