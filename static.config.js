@@ -42,6 +42,6 @@ export default {
     public: config.paths.docsPublic(),
   },
   siteRoot: 'https://ptamarit.github.io',
-  basePath: 'Semantic-UI-React',
+  basePath: 'n____mantic-ui-react',
   webpack,
 }
